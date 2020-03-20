@@ -2,6 +2,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 public class UserDAO {
@@ -107,6 +109,36 @@ public class UserDAO {
             preparedStatement.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            DatabaseManager.closeAll(connection, preparedStatement, resultSet);
+        }
+    }
+    public static List<Module> queryModule(String teacher_id) {
+        //Get the connection object of the database
+        Connection connection = DatabaseManager.getConnection();
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        //Generate SQL code
+        StringBuilder sqlModule = new StringBuilder();
+        sqlModule.append("SELECT * FROM module where teacher_id='"+teacher_id+"'");
+//        Store module information in a list and return the list to the client
+        try {
+            preparedStatement = connection.prepareStatement(sqlModule.toString());
+            resultSet = preparedStatement.executeQuery();
+            List<Module> list=new ArrayList<Module>();
+            while(resultSet.next()){
+                Module module=new Module();
+                module.setModule_code(resultSet.getString(1));
+                module.setModule_name(resultSet.getString(2));
+                module.setTime(resultSet.getString(3));
+                module.setData(resultSet.getString(4));
+                list.add(module);
+            }
+            return list;
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
         } finally {
             DatabaseManager.closeAll(connection, preparedStatement, resultSet);
         }

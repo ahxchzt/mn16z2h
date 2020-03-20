@@ -16,8 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <activity
             android:name=".Login_Activity"
@@ -25,17 +23,7 @@
         <activity
             android:name=".Register_Activity"
             android:launchMode="singleTask" />
-=======
-=======
->>>>>>> 753b68a9555e6d4e83dd764f99226b8673d46416
-        <activity
-            android:name=".Login_Activity"
-            android:launchMode="singleTask" />
-
-<<<<<<< HEAD
->>>>>>> 753b68a9555e6d4e83dd764f99226b8673d46416
-=======
->>>>>>> 753b68a9555e6d4e83dd764f99226b8673d46416
+        <activity android:name=".SelectActivity" />
         <activity android:name=".Welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
