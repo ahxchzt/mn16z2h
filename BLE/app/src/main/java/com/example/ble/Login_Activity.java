@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.View;
 import android.os.Bundle;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.os.Looper;
 import org.json.JSONObject;
 import okhttp3.FormBody;
@@ -11,6 +12,8 @@ import okhttp3.Response;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.OkHttpClient;
+=======
+>>>>>>> 753b68a9555e6d4e83dd764f99226b8673d46416
 =======
 >>>>>>> 753b68a9555e6d4e83dd764f99226b8673d46416
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,7 +27,10 @@ public class Login_Activity extends AppCompatActivity {
     private EditText password;
     private Button login;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private Button register;
+=======
+>>>>>>> 753b68a9555e6d4e83dd764f99226b8673d46416
 =======
 >>>>>>> 753b68a9555e6d4e83dd764f99226b8673d46416
     @Override
@@ -33,7 +39,10 @@ public class Login_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         login = (Button) findViewById(R.id.login);
 <<<<<<< HEAD
+<<<<<<< HEAD
         register = (Button) findViewById(R.id.register);
+=======
+>>>>>>> 753b68a9555e6d4e83dd764f99226b8673d46416
 =======
 >>>>>>> 753b68a9555e6d4e83dd764f99226b8673d46416
         teacher_id = (EditText) findViewById(R.id.teacher_id);
@@ -45,6 +54,7 @@ public class Login_Activity extends AppCompatActivity {
                 login();
             }
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
 //      When the registration button is clicked, it will enter the registration page
         register.setOnClickListener(new View.OnClickListener(){
@@ -60,10 +70,14 @@ public class Login_Activity extends AppCompatActivity {
 =======
     }
 >>>>>>> 753b68a9555e6d4e83dd764f99226b8673d46416
+=======
+    }
+>>>>>>> 753b68a9555e6d4e83dd764f99226b8673d46416
     private void login(){
 //        Get the account number and password from the input field
         final String Teacher_id = teacher_id.getText().toString();
         final String pw = password.getText().toString();
+<<<<<<< HEAD
 <<<<<<< HEAD
             new Thread(new Runnable() {
             @Override
@@ -108,6 +122,10 @@ public class Login_Activity extends AppCompatActivity {
 
 
 
+=======
+
+    }
+>>>>>>> 753b68a9555e6d4e83dd764f99226b8673d46416
 =======
 
     }
