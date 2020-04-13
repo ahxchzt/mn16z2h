@@ -17,6 +17,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
 
+        <activity android:name=".BLE_Activity"></activity>
         <activity
             android:name=".Login_Activity"
             android:launchMode="singleTask" />
