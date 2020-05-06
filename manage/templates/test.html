@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+{#  <a href="" id="a">test</a>#}
+{#  <input type="get student information from module: " name="" id="input" value="" />#}
+<div style="text-align: center;">
+<form action="/import_teacher/" method="post" enctype="multipart/form-data">
+    please import teacher information<input type="file" name="excel_file" enctype="multipart/form-data">
+        <input type="submit">
+</form>
+<form action="/import_student/" method="post" enctype="multipart/form-data" style="margin: 20px">
+    please import student information<input type="file" name="excel_file" enctype="multipart/form-data">
+        <input type="submit">
+</form>
+<form action="/import_module/" method="post" enctype="multipart/form-data" style="margin: 20px">
+    please import module information<input type="file" name="excel_file" enctype="multipart/form-data">
+        <input type="submit">
+</form>
+</div>
+</body>
+{#<script type="text/javascript">#}
+{#    input.onkeyup=function(){#}
+{#        a.setAttribute("href","export_excel?module_code="+input.value);#}
+{#    }#}
+{#</script>#}
+</html>
