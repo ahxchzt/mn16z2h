@@ -54,10 +54,10 @@ public class LectureAdapter extends RecyclerView.Adapter<LectureAdapter.ViewHold
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final Lecture lecture = mListLecture.get(position);
-        holder.LectureName.setText(lecture.getName());
-        holder.LectureCode.setText(lecture.getCode());
-        holder.LectureData.setText(lecture.getData());
-        holder.LectureTime.setText(lecture.getTime());
+        holder.LectureName.setText("Module Name: "+lecture.getName());
+        holder.LectureCode.setText("Module Code: "+lecture.getCode());
+        holder.LectureData.setText("Data: "+lecture.getData());
+        holder.LectureTime.setText("Time: "+lecture.getTime());
     }
 
     @Override

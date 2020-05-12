@@ -59,13 +59,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
-<<<<<<< HEAD
     <com.example.ble.BottomNavigation
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.4" />
 
-=======
->>>>>>> 940cafe52b8614ccc67c2f55345d8371d7fa242d
 </LinearLayout>

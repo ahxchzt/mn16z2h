@@ -1,4 +1,5 @@
 from django.db import models
+
 class Admin(models.Model):
     id = models.IntegerField(primary_key=True)
     email = models.CharField(max_length=255, blank=True, null=True)
@@ -129,6 +130,8 @@ class Module(models.Model):
     class Meta:
         managed = False
         db_table = 'module'
+    def __str__(self):
+        return '%s - (%s)'%(self.module_name,self.module_code)
 
 
 class Student(models.Model):
@@ -138,10 +141,15 @@ class Student(models.Model):
     email = models.CharField(max_length=40, blank=True, null=True)
     assistant_email = models.CharField(max_length=40, blank=True, null=True)
     blueteeth_address = models.CharField(max_length=40, blank=True, null=True)
-
+    major=models.CharField(max_length=255)
+    gender=models.CharField(max_length=255,choices=(('male','male'),('female','female')))
+    grade=models.CharField(max_length=255,choices=(('1','grade 1'),('2','grade 2'),('3','grade 3'),('4','grade 4')))
+    sclass=models.CharField(max_length=255)
     class Meta:
         managed = False
         db_table = 'student'
+    def __str__(self):
+        return '%s - (%s)'%(self.name,self.student_id)
 
 
 class StudentModule(models.Model):
@@ -151,6 +159,8 @@ class StudentModule(models.Model):
     class Meta:
         managed = False
         db_table = 'student_module'
+    def __str__(self):
+        return '%s(%s) - %s(%s)'%(self.student.name,self.student.student_id,self.module_code.module_name,self.module_code.module_code)
 
 
 class Teacher(models.Model):
@@ -158,11 +168,14 @@ class Teacher(models.Model):
     email = models.CharField(max_length=40)
     password = models.CharField(max_length=40)
     name=models.CharField(max_length=255)
+    gender=models.CharField(max_length=255,choices=(('male','male'),('female','female')))
+    institute=models.CharField(max_length=255)
 
     class Meta:
         managed = False
         db_table = 'teacher'
-
+    def __str__(self):
+        return '%s - (%s)'%(self.name,self.teacher_id)
 
 
 

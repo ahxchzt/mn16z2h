@@ -59,8 +59,8 @@ public class BLE_Activity extends AppCompatActivity {
         lecture=(Lecture) getIntent().getSerializableExtra("Lecture");
         lectureTitle.setText(lecture.getCode());
         RecyclerView recyclerView= (RecyclerView) findViewById(R.id.student);
-//        LinearLayoutManager layoutManager=new LinearLayoutManager(this);
-//        recyclerView.setLayoutManager(layoutManager);
+        LinearLayoutManager layoutManager=new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
         initble();
         initstudent();
 //        When the scan button is clicked, the system will call ScanBlue()
