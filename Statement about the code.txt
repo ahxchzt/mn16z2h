@@ -1,0 +1,31 @@
+The developing of the Android app refers to the "first line of code", ISBN 978-7-115-43978-9, which is a well-known Chinese textbook on writing Android programs. The basic framework of the app refers to this book, especially the use of Listview and Adapter and the design of user interface.
+
+I was also responsible for the development of an Android app in 2018-2019 school year, Software Engineering Project, XJCO2913. At that time, I also referred to this book, therefore, the app of Final Project and the app of SEP has similarities in coding style and interface style. For example, the login function, there is not much difference between the two projects.
+
+
+
+
+CSDN is the largest IT community and service platform in China. It provides a large number of blogs and demos for users to learn relevant technologies.
+
+
+
+For the Bluetooth scanning function, I refer to some blogs and demos on CSDN, which are available here:
+
+blogs: https://blog.csdn.net/Crystal_xing/article/details/85264819
+
+	https://blog.csdn.net/linyili1224/article/details/79472371
+
+demo: https://download.csdn.net/download/qq_24712507/9743159
+
+
+
+For server building, especially the creation and use of DatabaseManager class, I refer to a blog  on CSDN, which are available here:
+
+https://blog.csdn.net/Mr_Megamind/article/details/72123869
+
+
+
+
+For data batch import and export function, I refer to a blog  on CSDN, which are available here:
+
+https://blog.csdn.net/qq_42571805/article/details/89057331

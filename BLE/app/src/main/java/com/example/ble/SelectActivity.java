@@ -72,8 +72,8 @@ public class SelectActivity extends AppCompatActivity {
             for (int b=0;b<ab.length();b++){
                 String a= test.getJSONArray("Result").getJSONObject(b).getString("module_code");
                 String bb= test.getJSONArray("Result").getJSONObject(b).getString("module_name");
-                String c= test.getJSONArray("Result").getJSONObject(b).getString("time");
-                String d= test.getJSONArray("Result").getJSONObject(b).getString("data");
+                String c= test.getJSONArray("Result").getJSONObject(b).getString("data");
+                String d= test.getJSONArray("Result").getJSONObject(b).getString("time");
                 Lecture lecture=new Lecture(a,bb,c,d);
                 System.out.println(a);
                 lectureList.add(lecture);

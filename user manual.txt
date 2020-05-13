@@ -1,0 +1,67 @@
+This is a user manual for the project, attendance system based on Bluetooth
+
+
+achievement presentation: see 'presentation.pdf'
+
+
+code reference: see "Statement about the code.txt"
+
+
+Project Overview:
+This project contains three parts, an Android app, a django website and a corresponding server.
+The folder “Androidserver” is the source code of Tomcat server and you should open it as a project with IDEA; 
+The folder “BLE” is the source code of the android app and you should open it as a project with Android Studio; 
+The folder “manage” is the Django website and you should open it as a project with Pycharm.
+
+
+Required environment and IDE:
+Java: version 1.8
+Python: 3.7
+Tomcat: 7.0.92
+MySQL: Ver 15.1 Distrib 10.1.38-MariaDB, for Win64
+Android Studio: 3.5.3 with minSdkVersion 21
+You should allow the program to use your Bluetooth and location functions,  and turn on your Bluetooth and location functions before you use the app.
+Pycharm: 2019.2.6
+IntelliJ IDEA: 2018.2.5
+Navicat premium: 15.0.11
+The required additional packages have been uploaded to github with the source code
+For installing MySQL and Tomcat, you can just download a program called XAMPP to help you install.
+
+
+Configure server and databse: see 'configure_database.pdf'
+
+
+Instruction to use:
+1. Open your MySQL
+
+2. Open 'manage' as Pycharm project, enter 'python manage.py runserver' to start the Django server.
+
+3. Open your browser and enter the URL: 127.0.0.1:8000/admin, login the admin site with provided superaccount and password
+account: ahxchzt  password: 123123
+
+4. Add some data for students, teachers and modules, or you can move to 127.0.0.1:8000 and import data from excel file.
+The template of excel file has been provided, you can modify or add any data. Sometimes, Excel will automatically convert 'text' to other tpye like 'time', 'data' or 'float'. However, you must make sure that the type of the excel cell is 'text'.
+
+5. Open "Androidserver' as IDEA project, and run the program as a Tomcat server.
+
+6. Open "BLE" as Android Studio project, and connect your phone to your computer via data cable. Run the program on your phone.
+You should allow the program to use your Bluetooth and location functions,  and turn on your Bluetooth and location functions before you use the app.
+What is more, You have to make sure your phone and computer are in the same WLAN.
+
+7. Enter a teacher id and password you just added, then click 'login' button.
+
+8. select a Module you just added for the teacher.
+
+9. click 'SCAN' button to scan the surrounding devices and the result will be shown in your screen.
+
+10. If a scanned student has absent_time which is greater than 3, then, when you click the 'absent' button, a warning email will be sent to the student automatically.
+Sometimes, the email will be recognized as spam.
+
+11. Use provided API to export data
+
+
+API:  
+http://127.0.0.1:8000/export_module will export all module information to a excel file. 
+http://127.0.0.1:8000/export_teacher will export all teacher information to a excel file.
+Exporting module and teacher information are functions for administrator, so you need to log in to adminsite before using these two APIs.
+http://127.0.0.1:8000/export_student_by_modulecode?module_code=xxxxx will export information of students who selected the module.
